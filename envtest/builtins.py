@@ -1,11 +1,15 @@
 import numpy as np
 from scipy.ndimage import gaussian_filter
-from math import pi, exp
+from PIL import Image
+from matplotlib import pyplot as plt
 
-__all__ = ['rand_array', 'smooth_image', 'my_mat_solve', 'fun_expo']
+__all__ = ['rand_array', 'smooth_image', 'my_mat_solve', 'time_travel']
 
-def fun_expo(x):
-    return pi**2*exp(x)
+def time_travel(file):
+    image = Image.open(file).convert('L')
+    plt.imshow(image, cmap= 'gray')
+    plt.axis("off")
+    plt.show()
 
 def rand_array(shape):
     return np.random.rand(*shape)

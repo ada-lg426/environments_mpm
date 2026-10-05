@@ -9,3 +9,7 @@ dependencies:
   - matplotlib>=3.10
   - pip:
       - -e . # install local repo
+  - scipy
+  - scikit-image
+  - sympy    
+  - pillow
